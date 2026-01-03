@@ -1,9 +1,19 @@
-// example.js
-function add(a, b) {
+// example_bug.js
+
+// Function with a small bug
+function multiply(a, b) {
+  // Intentional mistake: returning addition instead of multiplication
   return a + b;
 }
 
-console.log(add(2, 3));
+console.log(multiply(3, 4));
 
-// Dummy change to trigger Ellipsis review
-// Test Ellipsis AI
+// Add some extra lines so Ellipsis has enough context
+function subtract(a, b) {
+  return a - b;
+}
+
+function divide(a, b) {
+  if (b === 0) return "Cannot divide by zero";
+  return a / b;
+}
